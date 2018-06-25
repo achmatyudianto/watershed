@@ -1,0 +1,4 @@
+#Thu May 24 13:35:01 WIB 2018
+base.0=/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+renamed.0=classes.dex
+file.0=/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex

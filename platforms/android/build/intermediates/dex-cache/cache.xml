@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/desugar/release/3.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="27.0.1"
+        sha1="961642af7e57bc18ae57ae1d7aafca513633fe9e">
+        <dex dex="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/preDex/release/3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/desugar/release/2.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="27.0.1"
+        sha1="d4b7ba177ae64e26c19e00a0a01a5b189945058b">
+        <dex dex="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/preDex/release/2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/desugar/release/0.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="27.0.1"
+        sha1="3e41042ea2161e7c6e1b72eba111a87552bb7cd4">
+        <dex dex="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/preDex/release/1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/desugar/release/4.jar"
+        jumboMode="false"
+        min-sdk-version="19"
+        optimize="true"
+        revision="27.0.1"
+        sha1="6785164694a22294a2f9fb0ff5ddad0e224c7ba0">
+        <dex dex="/home/yudi/ionic/watershed/platforms/android/app/build/intermediates/transforms/preDex/release/4.jar" />
+    </item>
+
+</items>
