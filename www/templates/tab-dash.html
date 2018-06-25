@@ -1,17 +1,39 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Watershed">
   <ion-content class="padding">
-    <h2>Welcome to Ionic</h2>
-    <p>
-    This is the Ionic starter for tabs-based apps. For other starters and ready-made templates, check out the <a href="http://market.ionic.io/starters" target="_blank">Ionic Market</a>.
-    </p>
-    <p>
-      To edit the content of each tab, edit the corresponding template file in <code>www/templates/</code>. This template is <code>www/templates/tab-dash.html</code>
-    </p>
-    <p>
-    If you need help with your app, join the Ionic Community on the <a href="http://forum.ionicframework.com" target="_blank">Ionic Forum</a>. Make sure to <a href="http://twitter.com/ionicframework" target="_blank">follow us</a> on Twitter to get important updates and announcements for Ionic developers.
-    </p>
-    <p>
-      <b>Psst!</b> - Try <a href="http://view.ionic.io/">Ionic View</a> to easily share and test your app with clients and co-workers.
-    </p>
+     <div class="card">
+    <!-- View Image -->
+        <div id="img_ori" class="item item-image"> 
+          <img ng-src="{{pictureUrl}}" style="width: 100%;">
+        </div>
+
+    <!-- button take picture -->
+    <div class="row">
+      <div class="col-50" >
+        <div id="take_btn" class="full_cam padding">
+          <button ng-click="show()"
+            class="button button-block button-royal" style="font-size: 16px">Take Picture
+          </button>
+        </div>
+      </div>
+      <div class="col-50">
+        <div id="proccess_btn" class="full_cam padding hidden ">
+          <button ui-sref="dashproses" class="button button-block button-assertive" style="font-size: 16px">
+          Proccess
+          </button>
+          </div>
+        </div>
+    </div>
+  </div>
+<!-- <div class="list">
+  <a class="item item-icon-left" ng-click="takeCamera()">
+    <i class="icon ion-camera"></i>
+    Camera
+  </a>
+  <a class="item item-icon-left" ng-click="takeGallery()">
+    <i class="icon ion-image"></i>
+    Galeri
+  </a>
+</div> -->
+
   </ion-content>
 </ion-view>
