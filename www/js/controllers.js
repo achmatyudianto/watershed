@@ -181,35 +181,65 @@ angular.module('starter.controllers', [])
       for (var i = 0; i < imagePixels.height; i++){
         for (var j = 0; j < imagePixels.width; j++){
           var x = (i * 4) * imagePixels.width + j * 4;
+          // var avg = (imagePixels.data[x]*0.21) + (imagePixels.data[x + 1]*0.72) + (imagePixels.data[x + 2]*0.07);
           var avg = (imagePixels.data[x] + imagePixels.data[x + 1] + imagePixels.data[x + 2]) / 3;
 
           imagePixels.data[x] = avg;
           imagePixels.data[x + 1] = avg;
           imagePixels.data[x + 2] = avg;
 
-          if (imagePixels.data[x] > 155){
-            imagePixels.data[x] = 300;
+        }
+      }
+      console.log(imagePixels);
+      return ctx.putImageData(imagePixels, 0, 0, 0, 0, imagePixels.width, imagePixels.height);
+    };
+
+    $scope.getThresholding = function(){
+    console.log('iki Thresholding');
+    var canvas1 = document.getElementById('process_tempCanvas1');
+    var canvas2 = document.getElementById('process_tempCanvas2');
+    var ctx = canvas2.getContext('2d');
+    var width = canvas2.width = canvas1.naturalWidth || canvas1.width;
+    console.log(width);
+    var height = canvas2.height = canvas1.naturalHeight || canvas1.height;
+    console.log(height);
+
+    try {
+            ctx.drawImage(canvas1, 0, 0);
+        } catch (e) {
+            console.log(e);
+        }
+
+    var imagePixels = ctx.getImageData(0, 0, width, height);
+
+    for (var i = 0; i < imagePixels.height; i++){
+        for (var j = 0; j < imagePixels.width; j++){
+          var x = (i * 4) * imagePixels.width + j * 4;
+
+          // Hitam = 0
+          // Putih = 255
+          if (imagePixels.data[x] > 128){
+            imagePixels.data[x] = 0; //Hitam
           } else {
-            imagePixels.data[x] = 0;
+            imagePixels.data[x] = 255; //Putih
           }
 
-          if (imagePixels.data[x + 1] > 155) {
-            imagePixels.data[x + 1] = 300;
+          if (imagePixels.data[x + 1] > 128) {
+            imagePixels.data[x + 1] = 0; //Hitam
           } else {
-            imagePixels.data[x + 1] = 0;
+            imagePixels.data[x + 1] = 255; //Putih
           }
 
-          if (imagePixels.data[x + 2] > 155) {
-            imagePixels.data[x + 2] = 300;
+          if (imagePixels.data[x + 2] > 128) {
+            imagePixels.data[x + 2] = 0; //Hitam
           } else {
-            imagePixels.data[x + 2] = 0;
+            imagePixels.data[x + 2] = 255; //Putih
           }
         }
       }
-    console.log("iki image pixcel ");
-    console.log(imagePixels);
+      console.log(imagePixels);
 
-    return ctx.putImageData(imagePixels, 0, 0, 0, 0, imagePixels.width, imagePixels.height);
+      return ctx.putImageData(imagePixels, 0, 0, 0, 0, imagePixels.width, imagePixels.height);
     };
 
 })
